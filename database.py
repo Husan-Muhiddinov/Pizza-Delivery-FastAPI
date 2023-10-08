@@ -3,7 +3,7 @@ from sqlalchemy.orm import declarative_base,sessionmaker
 
 
 
-engine = create_engine("postgresql+psycopg2://postgres:tiger@localhost/pizza_delivery",
+engine = create_engine("postgresql+psycopg2://postgres:aaaa7777@localhost/pizza_delivery",
     echo=True
 )
 # 123456@127.0.0.1:5432
