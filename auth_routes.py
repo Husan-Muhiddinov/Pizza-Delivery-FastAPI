@@ -16,9 +16,9 @@ auth_router = APIRouter(
 session = Session(bind=engine)
 
 @auth_router.get('/')
-async def hello(Authorite:AuthJWT=Depends()):
+async def hello(Authorize:AuthJWT=Depends()):
     try:
-        Authorite.jwt_required()
+        Authorize.jwt_required()
 
     except Exception as e:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
