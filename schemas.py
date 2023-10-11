@@ -44,8 +44,16 @@ class OrderModel(BaseModel):
             'example':{
                 "quantity":2,
                 "pizza_size":"LARGE",
-                # "password":"password",
-                # "is_staff":False,
-                # "is_active":True,
+            }
+        }
+
+class OrderStatusModel(BaseModel):
+    order_status:Optional[str]="PENDING"
+
+    class Config:
+        orm_mode=True
+        schema_extra={
+            'example':{
+                "order_status":"PENDING",
             }
         }
