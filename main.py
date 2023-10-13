@@ -22,7 +22,7 @@ def custom_openapi():
     )
     
 
-    openapi_schema["components"]["securitySchemas"]={
+    openapi_schema['components']['securitySchemas']={
         "Bearer Auth": {
             "type":"apiKey",
             "in":"header",
@@ -45,7 +45,7 @@ def custom_openapi():
                 re.search("fresh_jwt_required", inspect.getsource(endpoint)) or
                 re.search("jwt_optional", inspect.getsource(endpoint))
             ):
-                openapi_schema["paths"][path][method]["security"]=[
+                openapi_schema['paths'][path][method]['security']=[
                     {
                         "Bearer Auth":[]
                     }
